@@ -79,8 +79,8 @@ int checkAll(const std::string& str, const char* outputFile){
             file << "Кол-во пробелов: " << spaceCount << std::endl;
             file << "Есть u: " << (isU ? "Да" : "Нет") << std::endl;
             file << "Имеются все буквы входящие в слово shina: " << (isS && isH && isI && isN && isA ? "Да" : "Нет") << std::endl;
-            file << "Иммется пара соседствующих букв no или on: " << (isNO ? "Да" : "Нет") << std::endl;
-            file << "Иммется пара соседствующих одинаковых символов: " << (isSameChar ? "Да" : "Нет") << std::endl;
+            file << "Имеется пара соседствующих букв no или on: " << (isNO ? "Да" : "Нет") << std::endl;
+            file << "Имеется пара соседствующих одинаковых символов: " << (isSameChar ? "Да" : "Нет") << std::endl;
             file << "Существуют такие i и j: " << (isIJ ? "Да" : "Нет") << std::endl;
 
             file.close();
@@ -90,8 +90,8 @@ int checkAll(const std::string& str, const char* outputFile){
             std::cout << "Кол-во пробелов: " << spaceCount << std::endl;
             std::cout << "Есть u: " << (isU ? "Да" : "Нет") << std::endl;
             std::cout << "Имеются все буквы входящие в слово shina: " << (isS && isH && isI && isN && isA ? "Да" : "Нет") << std::endl;
-            std::cout << "Иммется пара соседствующих букв no или on: " << (isNO ? "Да" : "Нет") << std::endl;
-            std::cout << "Иммется пара соседствующих одинаковых символов: " << (isSameChar ? "Да" : "Нет") << std::endl;
+            std::cout << "Имеется пара соседствующих букв no или on: " << (isNO ? "Да" : "Нет") << std::endl;
+            std::cout << "Имеется пара соседствующих одинаковых символов: " << (isSameChar ? "Да" : "Нет") << std::endl;
             std::cout << "Существуют такие i и j: " << (isIJ ? "Да" : "Нет") << std::endl;
             break;
         } else {

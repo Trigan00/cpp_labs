@@ -86,6 +86,33 @@ vector<int> findMonotonicRows(const vector<vector<int>>& matrix) {
     return monotonicRows;
 }
 
+bool isPalindrome(vector<int> vec) {
+    int left = 0;
+    int right = vec.size() - 1;
+    
+    while (left < right) {
+        if (vec[left] != vec[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    
+    return true;
+}
+
+vector<int> findPalindromeRows(vector<vector<int>> matrix) {
+    vector<int> result;
+    
+    for (int i = 0; i < matrix.size(); i++) {
+        if (isPalindrome(matrix[i])) {
+            result.push_back(i);
+        }
+    }
+
+    return result;
+}
+
 void readMatrixFromFile(const char* filename, int& numRows, int& numCols) {
     std::string filePath;
     std::cout << "Укажите файл для ввода исходных данных для работы программы (нажмите Enter для использования " << filename << "): ";
@@ -151,7 +178,7 @@ int output(const char* outputFile, vector<vector<int>> matrix){
     vector<int> sameElementRows = findSameElementRows(matrix);
     vector<int> evenRows = findEvenRows(matrix);
     vector<int> monotonicRows = findMonotonicRows(matrix);
-
+    vector<int> palindromeRows = findPalindromeRows(matrix);
 
     while (true)
     {
@@ -185,6 +212,10 @@ int output(const char* outputFile, vector<vector<int>> matrix){
             file << "Строки с монотонной последовательностью элементов:";
             for (int row : monotonicRows) file << " " << row;
             file << endl;
+
+            file << "Строки с палиндромами: ";
+            for (int row : palindromeRows) file << " " << row;
+            file << endl;
             
             file.close();
             std::cout << "Информация записана в файл" << std::endl;
@@ -204,6 +235,10 @@ int output(const char* outputFile, vector<vector<int>> matrix){
 
             cout << "Строки с монотонной последовательностью элементов:";
             for (int row : monotonicRows) cout << " " << row;
+            cout << endl;
+
+            cout << "Строки с палиндромами: ";
+            for (int row : palindromeRows) cout << " " << row;
             cout << endl;
             break;
         } else {
@@ -290,8 +325,6 @@ int RWConsole(const char* outputFile){
         std::cout << std::endl;
     }
 
-    // double* means = calculateColumnMeans(matrix, numRows, numCols);
-    
     output(outputFile, matrix);
 
     return 0;

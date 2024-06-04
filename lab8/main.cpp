@@ -117,14 +117,12 @@ int main() {
         }else if (inputSource == 2){
             int index = getN("Введите индекс узла, который требуется удалить из списка: ");
             deque.remove(index);
-            deque.writeToFile(dataFile);
         }else if (inputSource == 3){
             deque.sortByAge();
-            deque.writeToFile(dataFile);
         }else if (inputSource == 4){
             deque.assignDefaultValues();
-            deque.writeToFile(dataFile);
         }else if (inputSource == 5){
+            deque.writeToFile(dataFile);
             exit(0);
         }else {
             std::cout << "Неверное действие. Введите один из приведенных ниже.\n";

@@ -213,14 +213,12 @@ int main() {
         }else if (inputSource == 2){
             int index = getN("Введите индекс узла, который требуется удалить из списка: ");
             list.removeByIndex(index);
-            list.writeToFile(dataFile);
         }else if (inputSource == 3){
             list.sort();
-            list.writeToFile(dataFile);
         }else if (inputSource == 4){
             list.reset();
-            list.writeToFile(dataFile);
         }else if (inputSource == 5){
+            list.writeToFile(dataFile);
             exit(0);
         }else {
             std::cout << "Неверное действие. Введите один из приведенных ниже.\n";

@@ -57,22 +57,22 @@ int main(int argc, char* argv[])
     {
         if (approximatelyEqual(std::stod(argv[2]), std::stod(argv[3]), std::stod(argv[4])))
         {
-            std::cout << argv[2] << " равно " << argv[3] << " при заданном eps=" << argv[4] << std::endl;
+            std::cout << argv[2] << " равно " << argv[3] << " при eps=" << argv[4] << std::endl;
         }
         else
         {
-            std::cout << argv[2] << " НЕ равно " << argv[3] << " при заданном eps=" << argv[4] << std::endl;
+            std::cout << argv[2] << " не равно " << argv[3] << " при eps=" << argv[4] << std::endl;
         }
     }
     else
     {
         if (approximatelyEqualAbsRel(std::stod(argv[2]), std::stod(argv[3]), std::stod(argv[4]), std::stod(argv[5])))
         {
-            std::cout << argv[2] << " равно " << argv[3] << " при заданных absEpsilon=" << argv[4] <<" и relEpsilon=" << argv[5] << std::endl;
+            std::cout << argv[2] << " равно " << argv[3] << " при absEpsilon=" << argv[4] <<" и relEpsilon=" << argv[5] << std::endl;
         }
         else
         {
-            std::cout << argv[2] << " НЕ равно " << argv[3] << " при заданных absEpsilon=" << argv[4] << " и relEpsilon=" << argv[5] << std::endl;
+            std::cout << argv[2] << " не равно " << argv[3] << " при absEpsilon=" << argv[4] << " и relEpsilon=" << argv[5] << std::endl;
         }
     }
 }

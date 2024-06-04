@@ -1,0 +1,3 @@
+Sidorova Anna Sergeevna;28;Married
+Ivanov Ivan Ivanovich;30;Married
+Kazakov Alexander Kirillovich;22;Single
